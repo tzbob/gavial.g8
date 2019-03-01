@@ -14,22 +14,22 @@ scalacOptions in ThisBuild ++= Seq(
   "-language:implicitConversions"
 )
 
-lazy val $name$ = crossProject
+lazy val $name;format="word"$ = crossProject
   .in(file("."))
   .settings(
-    name := "$name$",
+    name := "$name;format="norm"$",
     addCompilerPlugin("org.scalamacros" % "paradise" % "2.1.0" cross CrossVersion.full),
     libraryDependencies ++= Seq("be.tzbob" %%% "gavial" % "0.4.0-SNAPSHOT"),
     scalaJSUseMainModuleInitializer := true
   )
 
-lazy val $name$JS = $name$.js
+lazy val $name;format="word"$JS = $name;format="word"$.js
   .settings(WebKeys.packagePrefix in Assets := "content/")
   .enablePlugins(ScalaJSBundlerPlugin, ScalaJSWeb)
 
-lazy val $name$JVM = $name$.jvm
+lazy val $name;format="word"$JVM = $name;format="word"$.jvm
   .settings(
-    scalaJSProjects := Seq($name$JS),
+    scalaJSProjects := Seq($name;format="norm"$JS),
     // Automatically package JS when JVM is compiled (optional)
     pipelineStages in Assets := Seq(scalaJSPipeline),
     managedClasspath in Runtime += (packageBin in Assets).value
@@ -37,4 +37,4 @@ lazy val $name$JVM = $name$.jvm
   .enablePlugins(WebScalaJSBundlerPlugin)
 
 // Automatically package JS when JVM is compiled (optional)
-onLoad in Global ~= (_ andThen ("project $name$JVM" :: _))
+onLoad in Global ~= (_ andThen ("project $name;format="norm"$JVM" :: _))
