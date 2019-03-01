@@ -1,7 +1,7 @@
 import mtfrp.core._
 import UI.html.all._
 
-object $name;format="Camel"$App extends GavianApp {
+object $name;format="Camel"$App extends GavialApp {
   val port = 8080
   val host = "localhost"
 
@@ -9,6 +9,6 @@ object $name;format="Camel"$App extends GavianApp {
 
   val ui = ClientDBehavior.constant {
     div(h1("Hello $name$!"),
-        p("Enjoy Gavian!"))
+        p("Enjoy Gavial!"))
   }
 }
