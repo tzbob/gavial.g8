@@ -5,7 +5,7 @@ object $name;format="Camel"$App extends GavialApp {
   val port = 8080
   val host = "localhost"
 
-  val headExtensions = List(script(src := s"$name;format="norm"$-fastopt.js"))
+  val headExtensions = List(script(src := s"$name;format="norm"$-fastopt-bundle.js"))
 
   val ui = ClientDBehavior.constant {
     div(h1("Hello $name$!"),
