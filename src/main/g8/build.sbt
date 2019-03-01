@@ -1,9 +1,9 @@
 resolvers in ThisBuild += "Sonatype OSS Snapshots" at
 "https://oss.sonatype.org/content/repositories/snapshots"
 
-ThisBuild / organization := "$organization$"
-ThisBuild / scalaVersion := "2.12.4"
-ThisBuild / version := "0.0.1-SNAPSHOT"
+organization in ThisBuild := "$organization$"
+scalaVersion in ThisBuild := "2.12.4"
+version in ThisBuild := "0.0.1-SNAPSHOT"
 
 scalacOptions in ThisBuild ++= Seq(
   "-feature",
