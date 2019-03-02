@@ -29,7 +29,7 @@ lazy val $name;format="word"$JS = $name;format="word"$.js
 
 lazy val $name;format="word"$JVM = $name;format="word"$.jvm
   .settings(
-    scalaJSProjects := Seq($name;format="norm"$JS),
+    scalaJSProjects := Seq($name;format="word"$JS),
     // Automatically package JS when JVM is compiled (optional)
     pipelineStages in Assets := Seq(scalaJSPipeline),
     managedClasspath in Runtime += (packageBin in Assets).value
@@ -37,4 +37,4 @@ lazy val $name;format="word"$JVM = $name;format="word"$.jvm
   .enablePlugins(WebScalaJSBundlerPlugin)
 
 // Automatically package JS when JVM is compiled (optional)
-onLoad in Global ~= (_ andThen ("project $name;format="norm"$JVM" :: _))
+onLoad in Global ~= (_ andThen ("project $name;format="word"$JVM" :: _))
