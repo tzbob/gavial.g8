@@ -3,7 +3,7 @@ resolvers in ThisBuild += "Sonatype OSS Snapshots" at
 
 organization in ThisBuild := "$organization$"
 scalaVersion in ThisBuild := "2.12.4"
-version in ThisBuild := "0.0.1-SNAPSHOT"
+version in ThisBuild := "0.0.2-SNAPSHOT"
 
 scalacOptions in ThisBuild ++= Seq(
   "-feature",
@@ -19,7 +19,7 @@ lazy val $name;format="word"$ = crossProject
   .settings(
     name := "$name;format="norm"$",
     addCompilerPlugin("org.scalamacros" % "paradise" % "2.1.0" cross CrossVersion.full),
-    libraryDependencies ++= Seq("be.tzbob" %%% "gavial" % "0.4.0-SNAPSHOT"),
+    libraryDependencies ++= Seq("be.tzbob" %%% "gavial" % "0.4.2-SNAPSHOT"),
     scalaJSUseMainModuleInitializer := true
   )
 
