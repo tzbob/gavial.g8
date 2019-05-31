@@ -25,7 +25,7 @@ lazy val $name;format="word"$ = crossProject
 
 lazy val $name;format="word"$JS = $name;format="word"$.js
   .settings(WebKeys.packagePrefix in Assets := "content/")
-  .enablePlugins(ScalaJSBundlerPlugin, ScalaJSWeb)
+  .enablePlugins(ScalaJSBundlerPlugin)
 
 lazy val $name;format="word"$JVM = $name;format="word"$.jvm
   .settings(
